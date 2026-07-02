@@ -58,45 +58,45 @@ import Layout from "../layouts/Layout.astro";
     <img src="/assets/speech-box.png" class="pointer-events-none block mx-16" />
   </section>
 
-  <!-- shop -->
-  <section id="shop" class="reveal pb-16">
+  <!-- prizes -->
+  <section id="prizes" class="reveal pb-16">
     <div class="relative overflow-hidden w-[50%] mx-32">
       <img
         src="/assets/shop-title.png"
         class="pointer-events-none block w-[70%] mt-48"
       />
-      <div class="grid grid-cols-2 grid-rows-3 gap-2">
-        <button class="grid-item" data-full="/assets/shop/shop-stickers.png">
+      <div class="grid grid-cols-2 grid-rows-4 gap-2">
+        <button class="grid-item" data-full="/assets/shop/stickers-expanded.png">
           <img
             src="/assets/shop/shop-stickers.png"
             alt="item 1"
             class="w-[80%] object-cover"
           />
         </button>
-        <button class="grid-item" data-full="/assets/shop/shop-stickers.png">
+        <button class="grid-item" data-full="/assets/shop/keychain-expanded.png">
           <img
-            src="/assets/shop/shop-stickers.png"
+            src="/assets/shop/shop-keychain.png"
             alt="item 2"
             class="w-[80%] object-cover"
           />
         </button>
-        <button class="grid-item" data-full="/assets/shop/shop-stickers.png">
+        <button class="grid-item" data-full="/assets/shop/pop-mart-expanded.png">
           <img
-            src="/assets/shop/shop-stickers.png"
+            src="/assets/shop/shop-pop-mart.png"
             alt="item 3"
             class="w-[80%] object-cover"
           />
         </button>
-        <button class="grid-item" data-full="/assets/shop/shop-stickers.png">
+        <button class="grid-item" data-full="/assets/shop/shirt-1-expanded.png">
           <img
-            src="/assets/shop/shop-stickers.png"
+            src="/assets/shop/shop-shirt-1.png"
             alt="item 4"
             class="w-[80%] object-cover"
           />
         </button>
-        <button class="grid-item" data-full="/assets/shop/shop-stickers.png">
+        <button class="grid-item" data-full="/assets/shop/shirt-2-expanded.png">
           <img
-            src="/assets/shop/shop-stickers.png"
+            src="/assets/shop/shop-shirt-2.png"
             alt="item 5"
             class="w-[80%] object-cover"
           />
@@ -105,6 +105,13 @@ import Layout from "../layouts/Layout.astro";
           <img
             src="/assets/shop/shop-stickers.png"
             alt="item 6"
+            class="w-[80%] object-cover"
+          />
+        </button>
+        <button class="grid-item" data-full="/assets/shop/shop-stickers.png">
+          <img
+            src="/assets/shop/shop-stickers.png"
+            alt="item 7"
             class="w-[80%] object-cover"
           />
         </button>
@@ -202,10 +209,10 @@ import Layout from "../layouts/Layout.astro";
     display: flex;
   }
   .lightbox img {
-    max-width: 90vw;
-    max-height: 90vh;
+    max-width: 60vw;
+    max-height: 60vh;
     border-radius: 1rem;
-    transform: translateX(-20vw);
+    transform: translateX(-15vw);
   }
 
   .img-overlay {
