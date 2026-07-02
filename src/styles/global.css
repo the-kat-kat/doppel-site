@@ -1,5 +1,9 @@
-@import "tailwindcss";
 @import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap");
+@import "tailwindcss";
+
+@theme {
+  --color-primary: #f1ccff;
+}
 
 html {
   scroll-behavior: smooth;
@@ -15,7 +19,7 @@ body {
   background-attachment: fixed;
   inset: 0;
 }
-body::before {
+/* body::before {
   content: "";
   position: fixed;
   pointer-events: none;
@@ -25,7 +29,7 @@ body::before {
   background-position: center;
   inset: 0;
   z-index: 100;
-}
+} */
 .join-btn {
   position: relative;
   display: inline-block;
