@@ -9,7 +9,7 @@ const links = [
 ];
 ---
 
-<nav class="fixed flex top-[7vh] left-[2vw]">
+<nav class="fixed flex top-[7vh] left-[2vw] z-100">
    {links.map((link) => (
     <a
       href={link.href}
@@ -25,10 +25,10 @@ const links = [
   .nav-word {
     position: relative;
     display: inline-block;
-    scale: 0.8;
   }
   .nav-word img {
     display: block;
+    width: 70%;
   }
   .nav-word img.highlighted {
     position: absolute;

@@ -7,3 +7,19 @@ body{
     background-position: center;
     inset: 0;
 }
+.join-btn {
+  position: relative;
+  display: inline-block;
+}
+.join-btn img {
+  display: block;
+}
+.join-btn img.hover-img {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  transition: opacity 0.15s ease;
+}
+.join-btn:hover img.hover-img {
+  opacity: 1;
+}
