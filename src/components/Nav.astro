@@ -1,0 +1,43 @@
+---
+const pathname = Astro.url.pathname;
+
+const links = [
+    {href: "/", label: "home", src: "/assets/nav/home-highlighted.png", highlighted: "/assets/nav/home.png"},
+    {href: "/join", label: "join", src: "/assets/nav/join-highlighted.png", highlighted: "/assets/nav/join.png"},
+    {href: "/shop", label: "shop", src: "/assets/nav/shop-highlighted.png", highlighted: "/assets/nav/shop.png"},
+    {href: "/faq", label: "faq", src: "/assets/nav/faq-highlighted.png", highlighted: "/assets/nav/faq.png"},
+];
+---
+
+<nav class="fixed flex top-[7vh] left-[2vw]">
+   {links.map((link) => (
+    <a
+      href={link.href}
+      class:list={["nav-word", { active: pathname === link.href }]}
+    >
+      <img src={link.src} class="default" alt={link.label} />
+      <img src={link.highlighted} class="highlighted" alt={`${link.label} highlighted`} />
+    </a>
+  ))}
+</nav>
+
+<style>
+  .nav-word {
+    position: relative;
+    display: inline-block;
+    scale: 0.8;
+  }
+  .nav-word img {
+    display: block;
+  }
+  .nav-word img.highlighted {
+    position: absolute;
+    inset: 0;
+    opacity: 0;
+    transition: opacity 0.15s ease;
+  }
+  .nav-word:hover img.highlighted,
+  .nav-word.active img.highlighted {
+    opacity: 1;
+  }
+</style>

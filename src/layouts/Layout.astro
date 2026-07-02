@@ -1,5 +1,6 @@
 ---
 import "../styles/global.css";
+import Nav from "../components/Nav.astro";
 const {
   title = "doppel",
   description = "make your personal slackbot :o",
@@ -27,6 +28,8 @@ const pageUrl = new URL(
 		<meta property="og:url" content={pageUrl} />
 	</head>
 	<body>
+		<Nav />
+		<audio src="/assets/doppel-bgm.mp3" autoplay loop></audio>
 		<slot />
 	</body>
 </html>

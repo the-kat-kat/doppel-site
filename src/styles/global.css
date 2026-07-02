@@ -1,7 +1,7 @@
 @import "tailwindcss";
 
 body{
-    background-image: url('/assets/doppel-draft.png');
+    background-image: url('/assets/doppel-bg.png');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
