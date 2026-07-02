@@ -3,18 +3,331 @@ import Layout from "../layouts/Layout.astro";
 ---
 
 <Layout>
-  <div class="relative overflow-hidden">
-    <img
-      src="/assets/hi-im-doppel.png"
-      class="pointer-events-none block w-[70%] mt-32"
-    />
-    <a href="/join" class="join-btn">
-      <img src="/assets/join-me-1.png" class="default block w-[70%]" alt="join" />
-      <img src="/assets/join-me-2.png" class="hover-img block w-[70%]" alt="join hover" />
-    </a>
-    <img
-      src="/assets/big-button.png"
-      class="pointer-events-none block w-[70%] origin-top pt-16"
-    />
+  <!-- home -->
+  <audio id="miau" src="/assets/miau.mp3"></audio>
+  <section id="home" class="reveal">
+    <div class="relative overflow-hidden">
+      <img
+        src="/assets/hi-im-doppel.png"
+        class="pointer-events-none block w-[70%] mt-48"
+      />
+      <a id="join-btn" href="#join" class="join-btn">
+        <img
+          src="/assets/join-me-1.png"
+          class="default block w-[70%]"
+          alt="join"
+        />
+        <img
+          src="/assets/join-me-2.png"
+          class="hover-img block w-[70%]"
+          alt="join hover"
+        />
+      </a>
+      <img
+        src="/assets/big-button.png"
+        class="pointer-events-none block w-[70%] origin-top pt-8"
+      />
+    </div>
+  </section>
+
+  <!-- join -->
+  <section id="join" class="reveal">
+    <div class="relative overflow-hidden w-[60%] mx-32">
+      <img
+        src="/assets/join-title.png"
+        class="pointer-events-none block w-[70%] mt-48"
+      />
+      <p class="px-16">
+        hi there, i'm doppel! i'm a slackbot, which means i live in slack and
+        can do all sorts of cool things like edit messages, send gifs, and even
+        make your own custom commands! you've got to meet me to see it all in
+        action &gt;.&lt; here's how:
+        <br /><br />
+        first, you'll need to be in the hack club slack. if you haven't joined yet,
+        you can do so here:
+        <br />
+        <a href="https://hackclub.com" target="_blank">hackclub.com</a>
+        <br />
+        once you're in the slack, look up "doppel" and join the #doppel channel!
+        <br />
+        i'll welcome you then! aaa i'm so excited to meet you :3
+      </p>
+    </div>
+  </section>
+
+  <!-- shop -->
+  <section id="shop" class="reveal pb-16">
+    <div class="relative overflow-hidden w-[50%] mx-32">
+      <img
+        src="/assets/shop-title.png"
+        class="pointer-events-none block w-[70%] mt-48"
+      />
+      <div class="grid grid-cols-2 grid-rows-3 gap-2">
+        <button class="grid-item" data-full="/assets/shop/shop-stickers.png">
+          <img
+            src="/assets/shop/shop-stickers.png"
+            alt="item 1"
+            class="w-[80%] object-cover"
+          />
+        </button>
+        <button class="grid-item" data-full="/assets/shop/shop-stickers.png">
+          <img
+            src="/assets/shop/shop-stickers.png"
+            alt="item 2"
+            class="w-[80%] object-cover"
+          />
+        </button>
+        <button class="grid-item" data-full="/assets/shop/shop-stickers.png">
+          <img
+            src="/assets/shop/shop-stickers.png"
+            alt="item 3"
+            class="w-[80%] object-cover"
+          />
+        </button>
+        <button class="grid-item" data-full="/assets/shop/shop-stickers.png">
+          <img
+            src="/assets/shop/shop-stickers.png"
+            alt="item 4"
+            class="w-[80%] object-cover"
+          />
+        </button>
+        <button class="grid-item" data-full="/assets/shop/shop-stickers.png">
+          <img
+            src="/assets/shop/shop-stickers.png"
+            alt="item 5"
+            class="w-[80%] object-cover"
+          />
+        </button>
+        <button class="grid-item" data-full="/assets/shop/shop-stickers.png">
+          <img
+            src="/assets/shop/shop-stickers.png"
+            alt="item 6"
+            class="w-[80%] object-cover"
+          />
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- faq -->
+  <section id="faq" class="reveal pb-32">
+    <div class="relative overflow-hidden w-[50%] mx-32">
+      <img
+        src="/assets/faq-title.png"
+        class="pointer-events-none block w-[70%] mt-48"
+      />
+
+      <div class="faq-list">
+        <details class="faq-item">
+          <summary>what is doppel?</summary>
+          <p>
+            doppel is a personal slackbot ysws where you build your own bot and
+            doppel handles the submission! she's an anime girl who lives in the
+            hack club slack :3
+          </p>
+        </details>
+
+        <details class="faq-item">
+          <summary>do i need coding experience?</summary>
+          <p>
+            nope! we have guides to help you get started, even if you've never
+            built a bot before.
+          </p>
+        </details>
+
+        <details class="faq-item">
+          <summary>what do i get for submitting?</summary>
+          <p>
+            themed merch! check out the shop section for a preview of what's
+            available.
+          </p>
+        </details>
+
+        <details class="faq-item">
+          <summary>where do i ask more questions?</summary>
+          <p>
+            hop into the #doppel channel in the hack club slack, we're happy to
+            help!
+          </p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- lightbox overlay-->
+  <div id="lightbox" class="lightbox">
+    <img id="lightbox-img" src="" alt="expanded view" />
   </div>
 </Layout>
+
+<style>
+  /* home */
+  .reveal {
+    opacity: 0;
+    transform: translateY(40px);
+    transition:
+      opacity 0.8s ease,
+      transform 0.8s ease;
+  }
+  .reveal.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  /* shop */
+  grid-item {
+    padding: 0;
+    border: none;
+    background: none;
+    cursor: pointer;
+    aspect-ratio: 1 / 1;
+    overflow: hidden;
+  }
+  .grid-item img {
+    transition: transform 0.2s ease;
+  }
+  .grid-item:hover img {
+    transform: scale(1.05);
+  }
+
+  .lightbox {
+    position: fixed;
+    inset: 0;
+    background: rgba(121, 122, 208, 0.75);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 70;
+    cursor: zoom-out;
+  }
+  .lightbox.open {
+    display: flex;
+  }
+  .lightbox img {
+    max-width: 90vw;
+    max-height: 90vh;
+    border-radius: 1rem;
+    transform: translateX(-20vw);
+  }
+
+  .img-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.75);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 999;
+    cursor: zoom-out;
+  }
+  .img-overlay img {
+    max-width: 90vw;
+    max-height: 90vh;
+    border-radius: 1rem;
+  }
+  .overlay-close {
+    position: absolute;
+    top: 2rem;
+    right: 2rem;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 2.5rem;
+    line-height: 1;
+    cursor: pointer;
+    z-index: 1000;
+  }
+
+  body.no-scroll {
+    overflow: hidden;
+  }
+
+  .faq-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    margin-top: 2rem;
+  }
+
+  .faq-item {
+    background: rgba(255, 255, 255, 0.6);
+    border-radius: 1rem;
+    padding: 1rem 1.5rem;
+    cursor: pointer;
+  }
+
+  .faq-item summary {
+    font-weight: 600;
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .faq-item summary::-webkit-details-marker {
+    display: none;
+  }
+
+  .faq-item summary::after {
+    content: "+";
+    font-size: 1.5rem;
+    transition: transform 0.2s ease;
+  }
+
+  .faq-item[open] summary::after {
+    content: "−";
+  }
+
+  .faq-item p {
+    margin-top: 0.75rem;
+    font-size: 0.95rem;
+    opacity: 0.85;
+  }
+</style>
+
+<script>
+  const joinBtn = document.getElementById("join-btn");
+  const miauSFX = document.getElementById("miau") as HTMLAudioElement;
+
+  const lightbox = document.getElementById("lightbox");
+  const lightboxImg = document.getElementById(
+    "lightbox-img",
+  ) as HTMLImageElement;
+
+  joinBtn?.addEventListener("mouseenter", () => {
+    miauSFX.play();
+  });
+
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("visible");
+        }
+      });
+    },
+    { threshold: 0.15 },
+  );
+
+  document.querySelectorAll(".reveal").forEach((el) => observer.observe(el));
+
+  document.querySelectorAll(".grid-item").forEach((btn) => {
+    btn.addEventListener("click", () => {
+      const fullSrc = btn.getAttribute("data-full");
+      if (fullSrc && lightboxImg) {
+        lightboxImg.src = fullSrc;
+        lightbox?.classList.add("open");
+        document.body.classList.add("no-scroll");
+      }
+    });
+  });
+
+  lightbox?.addEventListener("click", () => {
+    lightbox.classList.remove("open");
+    document.body.classList.remove("no-scroll");
+  });
+
+  lightbox?.addEventListener("click", () => {
+    lightbox.classList.remove("open");
+  });
+</script>

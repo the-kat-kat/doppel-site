@@ -1,11 +1,30 @@
 @import "tailwindcss";
+@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap");
 
-body{
-    background-image: url('/assets/doppel-bg.png');
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    inset: 0;
+html {
+  scroll-behavior: smooth;
+}
+body {
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 20px;
+  color: #f3ffff;
+  background-image: url("/assets/doppel-bg.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+  inset: 0;
+}
+body::before {
+  content: "";
+  position: fixed;
+  pointer-events: none;
+  background-image: url("/assets/doppel-frame.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  inset: 0;
+  z-index: 100;
 }
 .join-btn {
   position: relative;
