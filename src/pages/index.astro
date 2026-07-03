@@ -35,12 +35,12 @@ import Layout from "../layouts/Layout.astro";
   </section>
 
   <div
-    class="flex pointer-events-none items-center right-0 top-0 bottom-0 z-150 max-w-150 mt-4 m-auto lg:max-w-[50vw] lg:fixed"
+    class="flex pointer-events-none items-center right-0 top-0 bottom-0 z-50 max-w-150 mt-4 m-auto lg:max-w-[50vw] lg:fixed"
   >
     <img src="/assets/doppel.png" class="w-full" />
     <img
       src="/assets/made-with-love.png"
-      class="fixed max-w-10 bottom-[7vh] right-0 z-100"
+      class="fixed max-w-10 bottom-[7vh] right-0 z-50"
     />
   </div>
 
@@ -54,7 +54,7 @@ import Layout from "../layouts/Layout.astro";
       class="pointer-events-none block mb-8 w-[50%] mt-36 lg:mt-48"
     />
 
-    <p>
+    <p class="my-6 lg:my-12">
       hey hey, i'm doppel! i'm a slack selfbot, which means i'm a seemingly
       normal user that live in the hack club slack, but i'm actually a bot that
       can do a lot of cool things! you've got to meet me to see it all &gt;.&lt;
@@ -78,160 +78,156 @@ import Layout from "../layouts/Layout.astro";
   </section>
 
   <!-- prizes -->
-  <section id="prizes" class="reveal lg:pb-16">
-    <div class="relative overflow-hidden lg:w-[50%] pt-24 lg:pt-48 mx-8 lg:mx-20">
-      <img
-        src="/assets/shop-title.png"
-        class="pointer-events-none block w-[70%] mb-8 "
-      />
-      <div class="grid grid-cols-2 grid-rows-4 gap-2">
-        <button
-          class="grid-item"
-          data-full="/assets/shop/stickers-expanded.png"
-        >
-          <img
-            src="/assets/shop/shop-stickers.png"
-            alt="item 1"
-            class="w-[80%] object-cover"
-          />
-        </button>
-        <button
-          class="grid-item"
-          data-full="/assets/shop/keychain-expanded.png"
-        >
-          <img
-            src="/assets/shop/shop-keychain.png"
-            alt="item 2"
-            class="w-[80%] object-cover"
-          />
-        </button>
-        <button class="grid-item" data-full="/assets/shop/web-expanded.png">
-          <img
-            src="/assets/shop/shop-web.png"
-            alt="item 2"
-            class="w-[80%] object-cover"
-          />
-        </button>
-        <button
-          class="grid-item"
-          data-full="/assets/shop/pop-mart-expanded.png"
-        >
-          <img
-            src="/assets/shop/shop-pop-mart.png"
-            alt="item 3"
-            class="w-[80%] object-cover"
-          />
-        </button>
-        <button class="grid-item" data-full="/assets/shop/shirt-2-expanded.png">
-          <img
-            src="/assets/shop/shop-shirt-2.png"
-            alt="item 5"
-            class="w-[80%] object-cover"
-          />
-        </button>
-        <button class="grid-item" data-full="/assets/shop/pi-expanded.png">
-          <img
-            src="/assets/shop/shop-pi.png"
-            alt="item 6"
-            class="w-[80%] object-cover"
-          />
-        </button>
-        <button class="grid-item" data-full="/assets/shop/yubikey-expanded.png">
-          <img
-            src="/assets/shop/shop-yubikey.png"
-            alt="item 7"
-            class="w-[80%] object-cover"
-          />
-        </button>
-        <button class="grid-item" data-full="/assets/shop/ducky-expanded.png">
-          <img
-            src="/assets/shop/shop-ducky.png"
-            alt="item 7"
-            class="w-[80%] object-cover"
-          />
-        </button>
-      </div>
+  <section
+    id="prizes"
+    class="reveal relative overflow-hidden mx-8 lg:w-[50%] lg:mx-20"
+  >
+    <img
+      src="/assets/shop-title-cropped.png"
+      class="pointer-events-none block w-[70%] mb-8 mt-24 lg:mt-48"
+    />
+    <div class="grid grid-cols-2 grid-rows-4 gap-2">
+      <button class="grid-item" data-full="/assets/shop/stickers-expanded.png">
+        <img
+          src="/assets/shop/shop-stickers.png"
+          alt="item 1"
+          class="w-[80%] object-cover"
+        />
+      </button>
+      <button class="grid-item" data-full="/assets/shop/keychain-expanded.png">
+        <img
+          src="/assets/shop/shop-keychain.png"
+          alt="item 2"
+          class="w-[80%] object-cover"
+        />
+      </button>
+      <button class="grid-item" data-full="/assets/shop/web-expanded.png">
+        <img
+          src="/assets/shop/shop-web.png"
+          alt="item 2"
+          class="w-[80%] object-cover"
+        />
+      </button>
+      <button class="grid-item" data-full="/assets/shop/pop-mart-expanded.png">
+        <img
+          src="/assets/shop/shop-pop-mart.png"
+          alt="item 3"
+          class="w-[80%] object-cover"
+        />
+      </button>
+      <button class="grid-item" data-full="/assets/shop/shirt-2-expanded.png">
+        <img
+          src="/assets/shop/shop-shirt-2.png"
+          alt="item 5"
+          class="w-[80%] object-cover"
+        />
+      </button>
+      <button class="grid-item" data-full="/assets/shop/pi-expanded.png">
+        <img
+          src="/assets/shop/shop-pi.png"
+          alt="item 6"
+          class="w-[80%] object-cover"
+        />
+      </button>
+      <button class="grid-item" data-full="/assets/shop/yubikey-expanded.png">
+        <img
+          src="/assets/shop/shop-yubikey.png"
+          alt="item 7"
+          class="w-[80%] object-cover"
+        />
+      </button>
+      <button class="grid-item" data-full="/assets/shop/ducky-expanded.png">
+        <img
+          src="/assets/shop/shop-ducky.png"
+          alt="item 7"
+          class="w-[80%] object-cover"
+        />
+      </button>
     </div>
   </section>
 
   <!-- faq -->
-  <section id="faq" class="reveal pb-8 lg:pb-32">
-    <div class="relative overflow-hidden lg:w-[50%] mx-8 lg:mx-20">
-      <img
-        src="/assets/faq-title.png"
-        class="pointer-events-none block w-[70%] mt-24 lg:mt-48"
-      />
+  <section
+    id="faq"
+    class="reveal relative overflow-hidden lg:w-[50%] mx-8 lg:mx-20 pb-8 lg:pb-32"
+  >
+    <img
+      src="/assets/faq-title-cropped.png"
+      class="pointer-events-none block w-[40%] mt-24 lg:mt-48"
+    />
 
-      <div class="faq-list">
-        <details class="faq-item">
-          <summary>what is doppel?</summary>
-          <p>
-            doppel is a <a
-              href="https://hackclub.com/"
-              target="_blank"
-              class="underline">hack club</a
-            > you ship, we ship event, where you (yes, you!) ship a slack selfbot
-            (see below) and we ship you prizes!
-          </p>
-          <p>(it's also my name :3)</p>
-        </details>
+    <div class="faq-list">
+      <details class="faq-item">
+        <summary>what is doppel?</summary>
+        <p>
+          doppel is a <a
+            href="https://hackclub.com/"
+            target="_blank"
+            class="underline">hack club</a
+          > you ship, we ship event, where you (yes, you!) ship a slack selfbot (see
+          below) and we ship you prizes!
+        </p>
+        <p>(it's also my name :3)</p>
+      </details>
 
-        <details class="faq-item">
-          <summary>who can participate?</summary>
-          <p>anyone the age of 18 or below can participate!</p>
-        </details>
+      <details class="faq-item">
+        <summary>who can participate?</summary>
+        <p>anyone the age of 18 or below can participate!</p>
+      </details>
 
-        <details class="faq-item">
-          <summary>when does it start &amp; end?</summary>
-          <p>
-            doppel starts on july 2 and ends on july 16 at noon eastern time!
-          </p>
-        </details>
+      <details class="faq-item">
+        <summary>when does it start &amp; end?</summary>
+        <p>doppel starts on july 2 and ends on july 16 at noon eastern time!</p>
+      </details>
 
-        <details class="faq-item">
-          <summary>what is a selfbot?</summary>
-          <p>
-            a selfbot is a slack automation running on a user account. it can be
-            really simple, like a bot that sets your status based on the time of
-            day, or really complex, <a
-              href="https://hackclub.enterprise.slack.com/team/U0BE3DA1YFR"
-              target="_blank"
-              class="underline">like me</a
-            >!
-          </p>
-        </details>
+      <details class="faq-item">
+        <summary>what is a selfbot?</summary>
+        <p>
+          a selfbot is a slack automation running on a user account. it can be
+          really simple, like a bot that sets your status based on the time of
+          day, or really complex, <a
+            href="https://hackclub.enterprise.slack.com/team/U0BE3DA1YFR"
+            target="_blank"
+            class="underline">like me</a
+          >!
+        </p>
+      </details>
 
-        <details class="faq-item">
-          <summary>what are the project requirements?</summary>
-          <p>your project must:</p>
-          <ul class="list-disc ms-4">
-            <li>be open source</li>
-            <li>have a README.md</li>
-            <li>
-              perform some kind of automation using a slack user account,
-              instead of a bot
-            </li>
-            <li>work out of the box (no compiling locally!)</li>
-          </ul>
-        </details>
+      <details class="faq-item">
+        <summary>what are the project requirements?</summary>
+        <p>your project must:</p>
+        <ul class="list-disc ms-4">
+          <li>be open source</li>
+          <li>have a README.md</li>
+          <li>
+            perform some kind of automation using a slack user account, instead
+            of a bot
+          </li>
+          <li>work out of the box (no compiling locally!)</li>
+        </ul>
+      </details>
 
-        <details class="faq-item">
-          <summary>where do i ask more questions?</summary>
-          <p>
-            join <a
-              href="https://hackclub.enterprise.slack.com/archives/C0BEAG698GH"
-              target="_blank"
-              class="underline">my channel</a
-            > on slack and just ask there!
-          </p>
-        </details>
-      </div>
+      <details class="faq-item">
+        <summary>where do i ask more questions?</summary>
+        <p>
+          join <a
+            href="https://hackclub.enterprise.slack.com/archives/C0BEAG698GH"
+            target="_blank"
+            class="underline">my channel</a
+          > on slack and just ask there!
+        </p>
+      </details>
     </div>
   </section>
 
   <!-- lightbox overlay-->
   <div id="lightbox" class="lightbox">
-    <img id="lightbox-img" src="" alt="expanded view" />
+    <img
+      id="lightbox-img"
+      src=""
+      alt="expanded view"
+      class="max-w-[90vw] rounded z-70 lg:max-w-[60vw] lg:max-h-[60vh]"
+    />
   </div>
 </Layout>
 
@@ -277,12 +273,6 @@ import Layout from "../layouts/Layout.astro";
   }
   .lightbox.open {
     display: flex;
-  }
-  .lightbox img {
-    max-width: 60vw;
-    max-height: 60vh;
-    border-radius: 1rem;
-    transform: translateX(-15vw);
   }
 
   .img-overlay {
