@@ -12,7 +12,7 @@ body {
   font-family: "Space Grotesk", sans-serif;
   font-size: 20px;
   color: #f3ffff;
-  background-image: url("/assets/doppel-bg.png");
+  background-image: url("/assets/doppel-bg.webp");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -24,7 +24,7 @@ body::before {
   content: "";
   position: fixed;
   pointer-events: none;
-  background-image: url("/assets/frame.png");
+  background-image: url("/assets/frame.webp");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
